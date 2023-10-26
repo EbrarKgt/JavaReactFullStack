@@ -32,6 +32,5 @@ public class ProductManager {
         for (Logger logger : loggers) {
             logger.log(product.getName());
         }
-
     }
 }
