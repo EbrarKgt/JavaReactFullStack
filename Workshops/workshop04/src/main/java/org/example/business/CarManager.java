@@ -17,8 +17,8 @@ public class CarManager {
         if (car.getModel().length() < 1) {
             throw new Exception("Every car must have a model which belongs its brand.");
         }
-        if (car.getPrice() < 1000) {
-            throw new Exception("Each car must have a market average price");
+        if (car.getPrice() < 15000) {
+            throw new Exception("Each car must have a market average price. (e.g. 15000)");
         }
         if (car.getStockQuantity() < 1) {
             throw new Exception("At least one stock should be kept for each vehicle.");
