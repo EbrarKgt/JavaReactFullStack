@@ -14,6 +14,9 @@ public class PaymentMethod {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column (name = "payment_type")
+    private String payment_type;
+
     @OneToMany (mappedBy = "paymentMethod")
     private List<CardPayment> cardPayments;
 

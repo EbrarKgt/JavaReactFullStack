@@ -13,20 +13,11 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column (name = "name")
-    private String name;
-
-    @Column (name = "surname")
-    private String surname;
-
-    @Column (name = "age")
-    private short age;
-
     @Column (name = "phone_number")
     private String phone;
 
-    @Column (name = "drivers_license")
-    private String drivers_license;
+    @Column (name = "customer_number")
+    private int customer_number;
 
     @OneToMany (mappedBy = "customer")
     private List<IndividualCustomer> individualCustomers;

@@ -11,9 +11,17 @@ public class IndividualCustomer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column (name = "address")
-    private String address;
+    @Column (name = "name")
+    private String name;
 
+    @Column (name = "surname")
+    private String surname;
+
+    @Column (name = "age")
+    private short age;
+
+    @Column (name = "identity_number")
+    private String identity_number;
 
     @ManyToOne
     @JoinColumn (name = "customer_id")
