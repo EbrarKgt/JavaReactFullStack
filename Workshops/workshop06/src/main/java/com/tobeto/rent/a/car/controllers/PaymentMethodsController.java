@@ -36,5 +36,6 @@ public class PaymentMethodsController {
     public void updatePaymentMethod (@PathVariable int id, @RequestBody PaymentMethod paymentMethod){
         PaymentMethod paymentMethodToUpdate = paymentMethodRepository.findById(id).orElseThrow();
         paymentMethodToUpdate.setPaymentType(paymentMethod.getPaymentType());
+        paymentMethodRepository.save(paymentMethodToUpdate);
     }
 }

@@ -37,6 +37,7 @@ public class LeasingSystemsController {
         LeasingSystem leasingSystemToUpdate = leasingSystemRepository.findById(id).orElseThrow();
         leasingSystemToUpdate.setRenting_date(leasingSystem.getRenting_date());
         leasingSystemToUpdate.setReturn_date(leasingSystem.getReturn_date());
+        leasingSystemRepository.save(leasingSystemToUpdate);
     }
 
 }
