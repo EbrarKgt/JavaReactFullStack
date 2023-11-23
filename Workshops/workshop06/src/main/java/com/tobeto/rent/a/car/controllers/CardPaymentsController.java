@@ -32,7 +32,7 @@ public class CardPaymentsController {
         cardPaymentRepository.delete(cardPaymentToDelete);
     }
 
-    @PostMapping ("{id}") //Update
+    @PutMapping ("{id}") //Update
     public void updateCardPayment (@PathVariable int id, @RequestBody CardPayment cardPayment){
         CardPayment cardPaymentToUpdate = cardPaymentRepository.findById(id).orElseThrow();
         cardPaymentToUpdate.setCardNumber(cardPayment.getCardNumber());
