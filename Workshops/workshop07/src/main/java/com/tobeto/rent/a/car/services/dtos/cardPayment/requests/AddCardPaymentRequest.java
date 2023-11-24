@@ -1,0 +1,9 @@
+package com.tobeto.rent.a.car.services.dtos.cardPayment.requests;
+
+import lombok.Data;
+
+@Data
+public class AddCardPaymentRequest {
+    private String cardNumber;
+    private short instalmentNumber;
+}
