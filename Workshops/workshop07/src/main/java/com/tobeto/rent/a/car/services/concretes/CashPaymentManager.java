@@ -1,15 +1,13 @@
 package com.tobeto.rent.a.car.services.concretes;
 
-import com.tobeto.rent.a.car.entities.Car;
 import com.tobeto.rent.a.car.entities.CashPayment;
-import com.tobeto.rent.a.car.repositories.CarRepository;
 import com.tobeto.rent.a.car.repositories.CashPaymentRepository;
 import com.tobeto.rent.a.car.services.abstracts.CashPaymentService;
-import com.tobeto.rent.a.car.services.dtos.car.requests.AddCarRequest;
-import com.tobeto.rent.a.car.services.dtos.car.requests.UpdateCarRequest;
 import com.tobeto.rent.a.car.services.dtos.cashPayment.requests.AddCashPaymentRequest;
 import com.tobeto.rent.a.car.services.dtos.cashPayment.requests.UpdateCashPaymentRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CashPaymentManager implements CashPaymentService {
 
     private final CashPaymentRepository cashPaymentRepository;

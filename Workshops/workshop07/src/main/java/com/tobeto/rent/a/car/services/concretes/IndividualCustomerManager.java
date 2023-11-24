@@ -5,7 +5,9 @@ import com.tobeto.rent.a.car.repositories.IndividualCustomerRepository;
 import com.tobeto.rent.a.car.services.abstracts.IndividualCustomerService;
 import com.tobeto.rent.a.car.services.dtos.individualCustomer.requests.AddIndividualCustomerRequest;
 import com.tobeto.rent.a.car.services.dtos.individualCustomer.requests.UpdateIndividualCustomerRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class IndividualCustomerManager implements IndividualCustomerService {
 
     private final IndividualCustomerRepository individualCustomerRepository;

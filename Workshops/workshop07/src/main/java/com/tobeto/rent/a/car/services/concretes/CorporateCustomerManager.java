@@ -1,15 +1,13 @@
 package com.tobeto.rent.a.car.services.concretes;
 
-import com.tobeto.rent.a.car.entities.CashPayment;
 import com.tobeto.rent.a.car.entities.CorporateCustomer;
 import com.tobeto.rent.a.car.repositories.CorporateCustomerRepository;
 import com.tobeto.rent.a.car.services.abstracts.CorporateCustomerService;
 import com.tobeto.rent.a.car.services.dtos.corporateCustomer.requests.AddCorporateCustomerRequest;
 import com.tobeto.rent.a.car.services.dtos.corporateCustomer.requests.UpdateCorporateCustomerRequest;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-
+@Service
 public class CorporateCustomerManager implements CorporateCustomerService {
     private final CorporateCustomerRepository corporateCustomerRepository;
 

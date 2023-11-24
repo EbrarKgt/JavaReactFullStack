@@ -5,7 +5,9 @@ import com.tobeto.rent.a.car.repositories.CarRepository;
 import com.tobeto.rent.a.car.services.abstracts.CarService;
 import com.tobeto.rent.a.car.services.dtos.car.requests.AddCarRequest;
 import com.tobeto.rent.a.car.services.dtos.car.requests.UpdateCarRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CarManager implements CarService {
 
     private final CarRepository carRepository;

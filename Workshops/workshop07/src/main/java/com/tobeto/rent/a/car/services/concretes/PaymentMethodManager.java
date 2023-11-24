@@ -5,7 +5,9 @@ import com.tobeto.rent.a.car.repositories.PaymentMethodRepository;
 import com.tobeto.rent.a.car.services.abstracts.PaymentMethodService;
 import com.tobeto.rent.a.car.services.dtos.paymentMethod.requests.AddPaymentMethodRequest;
 import com.tobeto.rent.a.car.services.dtos.paymentMethod.requests.UpdatePaymentMethodRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PaymentMethodManager implements PaymentMethodService {
 
     private final PaymentMethodRepository paymentMethodRepository;

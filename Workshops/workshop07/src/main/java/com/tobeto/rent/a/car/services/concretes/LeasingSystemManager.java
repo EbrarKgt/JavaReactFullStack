@@ -5,7 +5,9 @@ import com.tobeto.rent.a.car.repositories.LeasingSystemRepository;
 import com.tobeto.rent.a.car.services.abstracts.LeasingSystemService;
 import com.tobeto.rent.a.car.services.dtos.leasingSystem.requests.AddLeasingSystemRequest;
 import com.tobeto.rent.a.car.services.dtos.leasingSystem.requests.UpdateLeasingSystemRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class LeasingSystemManager implements LeasingSystemService {
 
     private final LeasingSystemRepository leasingSystemRepository;
