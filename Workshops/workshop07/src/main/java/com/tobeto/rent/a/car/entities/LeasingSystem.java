@@ -20,10 +20,10 @@ public class LeasingSystem {
     private int id;
 
     @Column (name = "renting_date")
-    private LocalDate renting_date;
+    private LocalDate rentingDate;
 
     @Column (name = "return_date")
-    private LocalDate return_date;
+    private LocalDate returnDate;
 
     @ManyToOne
     @JoinColumn (name = "customer_id")

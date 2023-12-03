@@ -5,7 +5,11 @@ import com.tobeto.rent.a.car.repositories.CorporateCustomerRepository;
 import com.tobeto.rent.a.car.services.abstracts.CorporateCustomerService;
 import com.tobeto.rent.a.car.services.dtos.corporateCustomer.requests.AddCorporateCustomerRequest;
 import com.tobeto.rent.a.car.services.dtos.corporateCustomer.requests.UpdateCorporateCustomerRequest;
+import com.tobeto.rent.a.car.services.dtos.corporateCustomer.responses.GetListCompanyNameOrderedResponse;
+import com.tobeto.rent.a.car.services.dtos.corporateCustomer.responses.GetListCompanyNameResponse;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class CorporateCustomerManager implements CorporateCustomerService {
@@ -39,4 +43,14 @@ public class CorporateCustomerManager implements CorporateCustomerService {
          CorporateCustomer corporateCustomerToDelete = corporateCustomerRepository.findById(id).orElseThrow();
          corporateCustomerRepository.delete(corporateCustomerToDelete);
      }
+
+    @Override
+    public List<GetListCompanyNameResponse> getByTaxOfficeName(String taxOfficeName) {
+        return corporateCustomerRepository.findByName(taxOfficeName);
+    }
+
+    @Override
+    public List<GetListCompanyNameOrderedResponse> getByCompanyNameSorted(String companyName) {
+        return corporateCustomerRepository.findCompaniesAfterNameAlphabeticallySorted(companyName);
+    }
 }

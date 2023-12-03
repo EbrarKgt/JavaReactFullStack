@@ -5,7 +5,11 @@ import com.tobeto.rent.a.car.repositories.IndividualCustomerRepository;
 import com.tobeto.rent.a.car.services.abstracts.IndividualCustomerService;
 import com.tobeto.rent.a.car.services.dtos.individualCustomer.requests.AddIndividualCustomerRequest;
 import com.tobeto.rent.a.car.services.dtos.individualCustomer.requests.UpdateIndividualCustomerRequest;
+import com.tobeto.rent.a.car.services.dtos.individualCustomer.responses.GetListCustomerNameAndAgeResponse;
+import com.tobeto.rent.a.car.services.dtos.individualCustomer.responses.GetListNameSortedResponse;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class IndividualCustomerManager implements IndividualCustomerService {
@@ -40,5 +44,15 @@ public class IndividualCustomerManager implements IndividualCustomerService {
     public void deleteIndividualCustomer(int id) {
         IndividualCustomer individualCustomerToDelete = individualCustomerRepository.findById(id).orElseThrow();
         individualCustomerRepository.delete(individualCustomerToDelete);
+    }
+
+    @Override
+    public List<GetListCustomerNameAndAgeResponse> getByNameAndAge(int age) {
+        return individualCustomerRepository.findByAge(age);
+    }
+
+    @Override
+    public List<GetListNameSortedResponse> getByNameSorted() {
+        return individualCustomerRepository.findAllSortedByName();
     }
 }
