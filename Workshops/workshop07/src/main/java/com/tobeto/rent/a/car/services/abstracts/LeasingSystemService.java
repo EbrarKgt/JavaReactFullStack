@@ -12,6 +12,6 @@ public interface LeasingSystemService {
     void addLeasingSystem (AddLeasingSystemRequest addLeasingSystemRequest);
     void updateLeasingSystem (UpdateLeasingSystemRequest updateLeasingSystemRequest);
     void deleteLeasingSystem (int id);
-    List<GetListDateResponse> getByDate (LocalDate rentingDate, LocalDate returnDate);
-    List<GetListReturnResponse> getByCustomer ();
+   /* List<GetListDateResponse> getByDate (LocalDate rentingDate, LocalDate returnDate);
+    List<GetListReturnResponse> getByCustomer ();*/
 }

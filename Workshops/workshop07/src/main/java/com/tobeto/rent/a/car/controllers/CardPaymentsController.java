@@ -32,7 +32,7 @@ public class CardPaymentsController {
     public void deleteCardPayment (@PathVariable int id){
         cardPaymentService.deleteCardPayment(id);
     }
-
+/*
     @GetMapping ("card-number")
     public List <GetListCardNumberResponse> getByCardNumber (@RequestParam String cardNumber) {
         return cardPaymentService.getByCardNumber(cardNumber);
@@ -40,5 +40,5 @@ public class CardPaymentsController {
     @GetMapping ("instalment-number")
     public List<GetListInstalmentNumberResponse> getByInstalmentNumber (@RequestParam short instalmentNumber){
         return cardPaymentService.getByInstalmentNumber(instalmentNumber);
-    }
+    }*/
 }

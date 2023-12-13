@@ -11,5 +11,5 @@ public interface CashPaymentService {
     void addCashPayment (AddCashPaymentRequest addCashPaymentRequest);
     void updateCashPayment (UpdateCashPaymentRequest updateCashPaymentRequest);
     void deleteCashPayment (int id);
-    List <GetListExchangeTypeResponse> getByType (String exchange_type);
+    //List <GetListExchangeTypeResponse> getByType (String exchange_type);
 }

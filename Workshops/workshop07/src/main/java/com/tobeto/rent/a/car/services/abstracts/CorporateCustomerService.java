@@ -12,6 +12,6 @@ public interface CorporateCustomerService {
     void addCorporateCustomer (AddCorporateCustomerRequest addCorporateCustomerRequest);
     void updateCorporateCustomer (UpdateCorporateCustomerRequest updateCorporateCustomerRequest);
     void deleteCorporateCustomer (int id);
-    List<GetListCompanyNameResponse> getByTaxOfficeName (String taxOfficeName);
-    List <GetListCompanyNameOrderedResponse> getByCompanyNameSorted (String companyName);
+   /* List<GetListCompanyNameResponse> getByTaxOfficeName (String taxOfficeName);
+    List <GetListCompanyNameOrderedResponse> getByCompanyNameSorted (String companyName);*/
 }

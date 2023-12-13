@@ -38,9 +38,9 @@ public class CustomerManager implements CustomerService {
         Customer customerToDelete = customerRepository.findById(id).orElseThrow();
         customerRepository.delete(customerToDelete);
     }
-
+/*
     @Override
     public List<GetListPhoneResponse> getBySpecialPhone() {
         return customerRepository.findByPhoneContaining();
-    }
+    }*/
 }

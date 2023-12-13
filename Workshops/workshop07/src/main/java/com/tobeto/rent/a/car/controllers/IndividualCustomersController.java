@@ -33,7 +33,7 @@ public class IndividualCustomersController {
     public void deleteIndividualCustomer (@PathVariable int id){
         individualCustomerService.deleteIndividualCustomer(id);
     }
-
+/*
     @GetMapping ("name-and-age")
     public List <GetListCustomerNameAndAgeResponse> getByNameAndAge (@RequestParam int age){
         return individualCustomerService.getByNameAndAge(age);
@@ -42,5 +42,5 @@ public class IndividualCustomersController {
     @GetMapping("sorted-names")
     public List<GetListNameSortedResponse> getByNameSorted (){
         return individualCustomerService.getByNameSorted();
-    }
+    }*/
 }

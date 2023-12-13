@@ -33,7 +33,7 @@ public class CorporateCustomersController {
     public void deleteCorporateCustomer (@PathVariable int id){
         corporateCustomerService.deleteCorporateCustomer(id);
     }
-
+/*
     @GetMapping ("tax-office-name")
     public List<GetListCompanyNameResponse> getByTaxOfficeName (@RequestParam String taxOfficeName){
         return corporateCustomerService.getByTaxOfficeName(taxOfficeName);
@@ -42,5 +42,5 @@ public class CorporateCustomersController {
     @GetMapping ("company-name-sorted")
     public List <GetListCompanyNameOrderedResponse> getByCompanyNameSorted (@RequestParam String companyName){
         return corporateCustomerService.getByCompanyNameSorted(companyName);
-    }
+    }*/
 }

@@ -12,6 +12,6 @@ public interface CardPaymentService {
     void addCardPayment (AddCardPaymentRequest addCardPaymentRequest);
     void updateCardPayment (UpdateCardPaymentRequest updateCardPaymentRequest);
     void deleteCardPayment (int id);
-    List<GetListCardNumberResponse> getByCardNumber (String cardNumber);
-    List<GetListInstalmentNumberResponse> getByInstalmentNumber (short instalmentNumber);
+  //  List<GetListCardNumberResponse> getByCardNumber (String cardNumber);
+  //  List<GetListInstalmentNumberResponse> getByInstalmentNumber (short instalmentNumber);
 }

@@ -42,7 +42,7 @@ public class LeasingSystemManager implements LeasingSystemService {
         LeasingSystem leasingSystemToDelete = leasingSystemRepository.findById(id).orElseThrow();
         leasingSystemRepository.delete(leasingSystemToDelete);
     }
-
+/*
     @Override
     public List<GetListDateResponse> getByDate(LocalDate rentingDate, LocalDate returnDate) {
         return leasingSystemRepository.findByDateRange(rentingDate, returnDate);
@@ -51,6 +51,6 @@ public class LeasingSystemManager implements LeasingSystemService {
     @Override
     public List<GetListReturnResponse> getByCustomer() {
         return leasingSystemRepository.findCustomersWithPendingReturns();
-    }
+    }*/
 }
 

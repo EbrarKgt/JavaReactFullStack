@@ -45,7 +45,7 @@ public class CardPaymentManager implements CardPaymentService {
         cardPaymentRepository.delete(cardPaymentToDelete);
 
     }
-
+/*
     @Override
     public List<GetListCardNumberResponse> getByCardNumber(String cardNumber) {
         if (cardNumber.length() < 6) {
@@ -62,5 +62,5 @@ public class CardPaymentManager implements CardPaymentService {
     @Override
     public List<GetListInstalmentNumberResponse> getByInstalmentNumber(short instalmentNumber) {
         return cardPaymentRepository.findByInstalmentNumberLessThan(instalmentNumber);
-    }
+    }*/
 }

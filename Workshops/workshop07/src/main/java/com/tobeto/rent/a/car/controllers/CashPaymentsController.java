@@ -32,9 +32,9 @@ public class CashPaymentsController {
     public void deleteCashPayment (@PathVariable int id){
         cashPaymentService.deleteCashPayment(id);
     }
-
+/*
     @GetMapping ("exchange-type")
     public List <GetListExchangeTypeResponse> getByType (@RequestParam String exchange_type){
         return cashPaymentService.getByType(exchange_type);
-    }
+    }*/
 }

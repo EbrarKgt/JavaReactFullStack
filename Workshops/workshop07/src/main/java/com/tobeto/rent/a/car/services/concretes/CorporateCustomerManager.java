@@ -44,6 +44,7 @@ public class CorporateCustomerManager implements CorporateCustomerService {
          corporateCustomerRepository.delete(corporateCustomerToDelete);
      }
 
+     /*
     @Override
     public List<GetListCompanyNameResponse> getByTaxOfficeName(String taxOfficeName) {
         return corporateCustomerRepository.findByName(taxOfficeName);
@@ -52,5 +53,5 @@ public class CorporateCustomerManager implements CorporateCustomerService {
     @Override
     public List<GetListCompanyNameOrderedResponse> getByCompanyNameSorted(String companyName) {
         return corporateCustomerRepository.findCompaniesAfterNameAlphabeticallySorted(companyName);
-    }
+    }*/
 }

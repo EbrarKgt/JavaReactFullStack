@@ -11,6 +11,6 @@ public interface IndividualCustomerService {
     void addIndividualCustomer (AddIndividualCustomerRequest addIndividualCustomerRequest);
     void updateIndividualCustomer (UpdateIndividualCustomerRequest updateIndividualCustomerRequest);
     void deleteIndividualCustomer (int id);
-    List<GetListCustomerNameAndAgeResponse> getByNameAndAge (int age);
-    List<GetListNameSortedResponse> getByNameSorted();
+  /*  List<GetListCustomerNameAndAgeResponse> getByNameAndAge (int age);
+    List<GetListNameSortedResponse> getByNameSorted();*/
 }

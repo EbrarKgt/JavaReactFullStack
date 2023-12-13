@@ -47,19 +47,38 @@ public class CarManager implements CarService {
 
     @Override
     public List<GetListModelYearAndPriceResponse> getByYearAndPrice(int modelYear, double weeklyAmount) {
-        List<GetListModelYearAndPriceResponse> cars = carRepository.findByModelYearGreaterThanAndWeeklyAmountLessThan(modelYear, weeklyAmount);
+        /*List<GetListModelYearAndPriceResponse> cars = carRepository.findByModelYearGreaterThanAndWeeklyAmountLessThan(modelYear, weeklyAmount);
         if (cars.isEmpty()) {
             throw new RuntimeException("No vehicles matching your search criteria were found.");
         }
-        return cars;
-    }
+        return cars;*/
+        List<GetListModelYearAndPriceResponse> cars = carRepository.findByModelYearGreaterThanAndWeeklyAmountLessThan(modelYear, weeklyAmount)
+                    .stream()
+                    .filter(car -> car.getModelYear() > modelYear && car.getWeeklyAmount() < weeklyAmount)
+                    .toList();
+
+            if (cars.isEmpty()) {
+                throw new RuntimeException("No vehicles matching your search criteria were found.");
+            }
+
+            return cars;
+        }
 
     @Override
     public List<GetListModelYearAndModelNameResponse> getByYearAndName(int modelYear, String modelName) {
-        List<GetListModelYearAndModelNameResponse> result =  carRepository.findByModelYearGreaterThanAndModelName(modelYear, modelName);
+        /*List<GetListModelYearAndModelNameResponse> result =  carRepository.findByModelYearGreaterThanAndModelName(modelYear, modelName);
         if (result.isEmpty()){
             throw new RuntimeException("There are no records that are a match for your search.");
         }
-        return result;
+        return result;*/
+            List <GetListModelYearAndModelNameResponse> result = carRepository.findByModelYearGreaterThanAndModelName(modelYear, modelName)
+                    .stream()
+                    .filter(car -> car.getModelYear() > modelYear && car.getModelName().equals(modelName))
+                    .toList();
+
+            if (result.isEmpty()) {
+                throw new RuntimeException("There are no records that are a match for your search.");
+            }
+            return result;
+        }
     }
-}

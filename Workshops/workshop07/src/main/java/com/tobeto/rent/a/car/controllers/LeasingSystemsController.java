@@ -33,7 +33,7 @@ public class LeasingSystemsController {
     public void deleteLeasingSystem(@PathVariable int id) {
         leasingSystemService.deleteLeasingSystem(id);
     }
-
+/*
     @GetMapping("date-between")
     public List<GetListDateResponse> getByDate(@RequestParam LocalDate rentingDate, @RequestParam LocalDate returnDate) {
         return leasingSystemService.getByDate(rentingDate, returnDate);
@@ -42,5 +42,5 @@ public class LeasingSystemsController {
     @GetMapping ("unreturned-car")
     public List<GetListReturnResponse> getByCustomer (){
         return leasingSystemService.getByCustomer();
-    }
+    }*/
 }

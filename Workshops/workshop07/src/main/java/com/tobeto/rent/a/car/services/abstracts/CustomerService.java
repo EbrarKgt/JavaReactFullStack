@@ -11,5 +11,5 @@ public interface CustomerService {
     void addCustomer (AddCustomerRequest addCustomerRequest);
     void updateCustomer (UpdateCustomerRequest updateCustomerRequest);
     void deleteCustomer (int id);
-    List <GetListPhoneResponse> getBySpecialPhone ();
+   // List <GetListPhoneResponse> getBySpecialPhone ();
 }

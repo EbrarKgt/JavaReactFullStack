@@ -39,7 +39,7 @@ public class CashPaymentManager implements CashPaymentService {
         CashPayment cashPaymentToDelete = cashPaymentRepository.findById(id).orElseThrow();
         cashPaymentRepository.delete(cashPaymentToDelete);
     }
-
+/*
     @Override
     public List<GetListExchangeTypeResponse> getByType(String exchange_type) {
         List<GetListExchangeTypeResponse> type = cashPaymentRepository.findByExchangeTypeStartingWith(exchange_type);
@@ -47,5 +47,5 @@ public class CashPaymentManager implements CashPaymentService {
             throw new RuntimeException("There are no records that are a match for your search.");
         }
         return type;
-    }
+    }*/
 }

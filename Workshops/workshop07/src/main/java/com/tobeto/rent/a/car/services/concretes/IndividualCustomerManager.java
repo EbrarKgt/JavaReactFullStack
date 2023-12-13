@@ -45,7 +45,7 @@ public class IndividualCustomerManager implements IndividualCustomerService {
         IndividualCustomer individualCustomerToDelete = individualCustomerRepository.findById(id).orElseThrow();
         individualCustomerRepository.delete(individualCustomerToDelete);
     }
-
+/*
     @Override
     public List<GetListCustomerNameAndAgeResponse> getByNameAndAge(int age) {
         return individualCustomerRepository.findByAge(age);
@@ -54,5 +54,5 @@ public class IndividualCustomerManager implements IndividualCustomerService {
     @Override
     public List<GetListNameSortedResponse> getByNameSorted() {
         return individualCustomerRepository.findAllSortedByName();
-    }
+    }*/
 }

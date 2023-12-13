@@ -32,9 +32,9 @@ public class CustomersController {
     public void deleteCustomer (@PathVariable int id){
         customerService.deleteCustomer(id);
     }
-
+/*
     @GetMapping ("phones-with-special-char.")
     public List<GetListPhoneResponse> getBySpecialPhone (){
         return customerService.getBySpecialPhone();
-    }
+    }*/
 }
